@@ -231,7 +231,7 @@
 				beforeSend: function () {
 					sLoader.fadeIn();
 				},
-				success: function (response) {
+				error: function (response) {
 					console.log("Response:", response);
 	
 					// Ensure the response is parsed correctly
@@ -250,7 +250,7 @@
 						$('#message-warning').fadeIn();
 					}
 				},
-				error: function (xhr, status, error) {
+				success: function (xhr, status, error) {
 					console.error("Error Status:", status);
 					console.error("Error Details:", error);
 	
